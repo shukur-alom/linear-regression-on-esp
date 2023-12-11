@@ -1,4 +1,5 @@
 import paho.mqtt.client as paho
+import time
 
 try:
     client = paho.Client()
@@ -6,9 +7,12 @@ try:
     client.loop_start()
     client.subscribe('temperature/6117931', qos=1)
     client.subscribe('air/quality/6117931', qos=1)
+    client.subscribe('pre/humidity/6117931', qos=1)
+    client.subscribe('humidity/6117931', qos=1)
 
 except: print("\n\n\n\t\tCheck Your Internet Connection\n\n")
 
+temp,air,humidity,pre_humidity = 0,0,0,0
 
 def on_message(client, userdata, msg):
     global temp
@@ -17,7 +21,7 @@ def on_message(client, userdata, msg):
     global pre_humidity
     #print(msg.topic+" "+str(msg.qos)+" "+str(msg.payload))
     if msg.topic == "temperature/6117931":
-        temp = int(round(float(msg.payload)))
+        temp = float(round(float(msg.payload)))
        
     elif msg.topic == "air/quality/6117931":
         air = float(round(float(msg.payload)))
@@ -37,3 +41,4 @@ Humidity : {humidity}
 Predicted Humidity : {pre_humidity}
 
 ''')
+    time.sleep(2)
