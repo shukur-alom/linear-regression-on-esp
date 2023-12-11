@@ -7,7 +7,7 @@
 int dht11_pin = 23;           //dht22  // Humidity //Temperature
 int air_quality_pin = 32;    //mq135 // air_quality
 
-double pred_humi=0;
+long double pred_humi=0;
 
 
 WiFiClient wifiClient;
@@ -32,6 +32,7 @@ void reconnect() {
       mqttClient.subscribe("humidity/6117931");
       mqttClient.subscribe("temperature/6117931");
       mqttClient.subscribe("air/quality/6117931");
+      mqttClient.subscribe("pre/humidity/6117931");
       delay(2000);
 
     }
@@ -93,7 +94,6 @@ void loop() {
   //start coding
   else {
 
-    delay(1000);
 
     if (!mqttClient.connected())
       reconnect();
@@ -135,13 +135,14 @@ void loop() {
     
     Serial.print("predicted humidity : ");
 
-    char pred_humi_chr[8];
+    char pred_humi_chr[10];
     dtostrf(pred_humi, 1, 2, pred_humi_chr);
+    mqttClient.publish("pre/humidity/6117931", Temperature_str);
     Serial.println(pred_humi_chr);
     
     Serial.println(F("............................................"));
+    delay(1000);
   }
-
 
 
 
