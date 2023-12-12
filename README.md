@@ -54,4 +54,5 @@ This repository contains code and resources for a system that implements a linea
     * Process and utilize the received sensor data as required.
 
 
-[![Medium](https://cdn.icon-icons.com/icons2/2997/PNG/512/medium_logo_icon_187624.png)](https://medium.com/@shukuralom1234/run-linear-regression-model-on-esp32-08b0b51ea207)
+
+[Medium](https://medium.com/@shukuralom1234/run-linear-regression-model-on-esp32-08b0b51ea207)
