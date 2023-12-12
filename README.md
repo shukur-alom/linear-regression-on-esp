@@ -33,3 +33,18 @@ This repository contains code and resources for a system that implements a linea
 
     * Utilize the provided Python code to receive MQTT messages from the ESP32.
     * Modify the code as necessary to process the received sensor data.
+
+## Usage
+1. Model Training
+
+    * Run the training code to train the linear regression model.
+    * Note down the coefficients (m and c) obtained from the model.
+
+2. ESP32
+    * Change ssid and password
+    * Upload the modified code with the extracted coefficients to the ESP32 device.
+    * Ensure proper connectivity with the sensors.
+3. Python Script
+
+    * Run the Python script to listen for MQTT messages sent by the ESP32.
+    * Process and utilize the received sensor data as required.
