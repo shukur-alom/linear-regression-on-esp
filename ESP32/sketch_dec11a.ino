@@ -4,8 +4,8 @@
 #include <PubSubClient.h>
 #include "DHT.h"
 
-int dht11_pin = 23;           //dht22  // Humidity //Temperature
-int air_quality_pin = 32;    //mq135 // air_quality
+int dht11_pin = 23;          //dht11  // Humidity //Temperature
+int air_quality_pin = 32;    //mq2 // air_quality
 
 
 
