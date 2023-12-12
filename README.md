@@ -9,3 +9,27 @@ This repository contains code and resources for a system that implements a linea
 * DHT11 temperature and humidity sensor
 * Python 3.x
 * Libraries specified in requirements.txt
+
+## Setup
+1. Training the Model
+
+    * Use the provided training code (found in the repository) to train the linear regression model.
+    * Retrieve the coefficients (m and c) from the trained model.
+2. ESP32 Setup
+
+    * Upload the ESP32 code available in this repository to your ESP32 device.
+    * Set the obtained coefficients (m and c) in the appropriate variables within the ESP32 code.
+3. Sensor Integration
+
+    * Connect the MQ-2 and DHT11 sensors to the ESP32 based.
+        * MQT-2(AO) to ESP(23)
+        * MQT-2(GND) to ESP(GND)
+        * MQT-2(VCC) to ESP(Vin)
+        * DHT11(out) to ESP(32)
+        * DHT11(-) to ESP(GND)
+        * DHT11(+) to ESP(3v3)
+
+4. Python Code
+
+    * Utilize the provided Python code to receive MQTT messages from the ESP32.
+    * Modify the code as necessary to process the received sensor data.
