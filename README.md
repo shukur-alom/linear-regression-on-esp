@@ -5,6 +5,7 @@ This repository contains code and resources for a system that implements a linea
 
 [![Video Demo](https://img.youtube.com/vi/VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=GN5-JhI4vJI)
 
+[Watch Video Demo](https://www.youtube.com/watch?v=GN5-JhI4vJI)
 
 ## Requirements
 * ESP32 microcontroller
