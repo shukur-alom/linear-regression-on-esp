@@ -52,3 +52,6 @@ This repository contains code and resources for a system that implements a linea
 
     * Run the Python script to listen for MQTT messages sent by the ESP32.
     * Process and utilize the received sensor data as required.
+
+
+[Medium](https://medium.com/@shukuralom1234/run-linear-regression-model-on-esp32-08b0b51ea207)
