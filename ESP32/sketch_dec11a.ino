@@ -28,10 +28,10 @@ void reconnect() {
 
     if (mqttClient.connect(clientId.c_str())) {
       Serial.println("Connected.");
-      mqttClient.subscribe("humidity/6117931");
-      mqttClient.subscribe("temperature/6117931");
-      mqttClient.subscribe("air/quality/6117931");
-      mqttClient.subscribe("pre/humidity/6117931");
+      mqttClient.subscribe("humidity/33445566");
+      mqttClient.subscribe("temperature/33445566");
+      mqttClient.subscribe("air/quality/33445566");
+      mqttClient.subscribe("pre/humidity/33445566");
       delay(2000);
 
     }
@@ -43,8 +43,8 @@ void reconnect() {
 
 DHT dht(dht11_pin, DHT11);
 
-const char* ssid = "Home";
-const char* password = "61179318PD";
+const char* ssid = "SSID";
+const char* password = "Password";
 
 unsigned long previousMillis = 0;
 unsigned long interval = 30000;
@@ -114,12 +114,12 @@ void loop() {
 
     char Humidity_str[8];
     dtostrf(Humidity, 1, 2, Humidity_str);
-    mqttClient.publish("humidity/6117931", Humidity_str);
+    mqttClient.publish("humidity/33445566", Humidity_str);
 
 
     char Temperature_str[8];
     dtostrf(Temperature, 1, 2, Temperature_str);
-    mqttClient.publish("temperature/6117931", Temperature_str);
+    mqttClient.publish("temperature/33445566", Temperature_str);
 
 
     float air_quality = (analogRead(air_quality_pin));
@@ -127,7 +127,7 @@ void loop() {
     Serial.println(air_quality);
     char air_quality_str[8];
     dtostrf(air_quality, 1, 2, air_quality_str);
-    mqttClient.publish("air/quality/6117931", air_quality_str);
+    mqttClient.publish("air/quality/33445566", air_quality_str);
     delay(1000);
     
 
@@ -135,7 +135,7 @@ void loop() {
     Serial.print("predicted humidity : ");
     char pred_humi_chr[8];
     dtostrf(pred_humi, 1, 2, pred_humi_chr);
-    mqttClient.publish("pre/humidity/6117931", pred_humi_chr);
+    mqttClient.publish("pre/humidity/33445566", pred_humi_chr);
     Serial.println(pred_humi_chr);
     
     Serial.println(F("............................................"));
