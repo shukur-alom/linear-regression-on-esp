@@ -26,9 +26,9 @@ This repository contains code and resources for a system that implements a linea
 3. Sensor Integration
 
     * Connect the MQ-2 and DHT11 sensors to the ESP32 based.
-        * MQT-2(AO) to ESP(23)
-        * MQT-2(GND) to ESP(GND)
-        * MQT-2(VCC) to ESP(Vin)
+        * MQ-2(AO) to ESP(23)
+        * MQ-2(GND) to ESP(GND)
+        * MQ-2(VCC) to ESP(Vin)
         * DHT11(out) to ESP(32)
         * DHT11(-) to ESP(GND)
         * DHT11(+) to ESP(3v3)
