@@ -4,7 +4,7 @@
 This repository contains code and resources for a system that implements a linear regression model on an ESP32 microcontroller. The model's coefficients (m and c) are extracted from the trained model, and the ESP32 transmits sensor data using MQTT to a Python script for further processing.
 
 
-[![Watch the video](https://i.stack.imgur.com/Vp2cE.png)](https://github.com/shukur-alom/linear-regression-on-esp-esp32/blob/main/Media/video.mp4)
+[<img src="https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg" width="50%">](hhttps://github.com/shukur-alom/linear-regression-on-esp-esp32/blob/main/Media/video.mp4 "Now in Android: 55")
 
 ## Requirements
 * ESP32 microcontroller
