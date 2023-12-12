@@ -1,2 +1,5 @@
 # Python 3.10.12
 paho-mqtt==1.6.1
+seaborn==0.12.2
+matplotlib==3.7.4
+scikit-learn==1.2.2
